@@ -1,6 +1,6 @@
 class Poster {
   int _idPoster;
-  String _descrption;
+  String _description;
   String _title;
   bool _state;
   int _creditsAllow;
@@ -8,7 +8,7 @@ class Poster {
 
   Poster(
       this._idPoster,
-      this._descrption,
+      this._description,
       this._title,
       this._state,
       this._creditsAllow,
@@ -25,10 +25,10 @@ class Poster {
     _idPoster = value;
   }
 
-  String get descrption => _descrption;
+  String get descrption => _description;
 
   set descrption(String value) {
-    _descrption = value;
+    _description = value;
   }
 
   String get title => _title;
