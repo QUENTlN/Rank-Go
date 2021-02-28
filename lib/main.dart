@@ -82,12 +82,10 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
                     )),
                 child: new Center(
                   child: Row(children: <Widget>[
+                    Expanded(child: new Text("10")),
                     Expanded(
-                        child: new Text("10")
-                    ),
-                    Expanded(
-                        child: Icon(Icons.loop_rounded, color: Colors.white)
-                    )]),
+                        child: Icon(Icons.loop_rounded, color: Colors.white))
+                  ]),
                 )),
           ),
           backgroundColor: const Color(0xff242D4D),
