@@ -1,3 +1,7 @@
+import 'dart:convert';
+
+import 'package:rank_and_go/models/media.dart';
+
 class Poster {
   int _idPoster;
   String _description;
@@ -5,6 +9,11 @@ class Poster {
   bool _state;
   int _creditsAllow;
   bool _commentEnable;
+  int _idUser;
+  TypeNote _typeNotation;
+  Media _media1;
+  Media _media2;
+  Media _media3;
 
   Poster(
       this._idPoster,
@@ -14,10 +23,10 @@ class Poster {
       this._creditsAllow,
       this._commentEnable,
       this._idUser,
-      this._typeNotation);
-
-  int _idUser;
-  TypeNote _typeNotation;
+      this._typeNotation,
+      this._media1,
+      this._media2,
+      this._media3);
 
   int get idPoster => _idPoster;
 

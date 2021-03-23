@@ -53,11 +53,11 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
 
   Widget getTabBarPages() {
     return TabBarView(controller: tabController, children: <Widget>[
-      Container(color: const Color(0xff242D4D)),
-      Container(color: const Color(0xff242D4D)),
-      Container(color: const Color(0xff242D4D)),
-      Container(color: const Color(0xff242D4D)),
-      Container(color: const Color(0xff242D4D))
+      Container(color: Colors.white),
+      Container(color: Colors.blueAccent),
+      Container(color: Colors.green),
+      Container(color: Colors.red),
+      Container(color: Colors.yellow)
     ]);
   }
 

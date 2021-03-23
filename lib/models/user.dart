@@ -1,15 +1,10 @@
-class User{
+class User {
   int _idUser;
   int _credits;
   String _login;
   String _password;
 
-  User(
-    this._idUser,
-    this._credits,
-    this._login,
-    this._password
-  );
+  User(this._idUser, this._credits, this._login, this._password);
 
   int get idUser => _idUser;
 
