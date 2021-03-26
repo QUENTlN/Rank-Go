@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 import './feed.dart';
+import 'package:rank_and_go/galleryPoster.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -67,10 +68,10 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
 
   Widget getTabBarPages() {
     return TabBarView(controller: tabController, children: <Widget>[
-      Container(color: Colors.white),
-      Container(color: Colors.blueAccent),
-      Container(color: Colors.green),
-      Container(color: Colors.red),
+      Container(color: Color(0xff242D4D)),
+      Container(color: Color(0xff242D4D)),
+      Container(color : Color(0xff242D4D)),
+      GalleryPoster(),
       MyApp()
     ]);
   }
@@ -78,6 +79,7 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomPadding: true,
         appBar: AppBar(
           centerTitle: true,
           title: new Container(
