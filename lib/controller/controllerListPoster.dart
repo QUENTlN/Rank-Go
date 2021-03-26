@@ -5,7 +5,7 @@ import 'package:rank_and_go/models/media.dart';
 import 'package:rank_and_go/models/poster.dart';
 
 class ControllerListPoster {
-  Future<List<Poster>> getPostersTimeLine(int idCur) async {
+  static Future<List<Poster>> getPostersTimeLine(int idCur) async {
     var settings = new ConnectionSettings(
         host: 'localhost',
         port: 3306,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
+import './feed.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -21,6 +22,19 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
     super.initState();
 
     tabController = TabController(length: 5, vsync: this);
+  }
+
+  int _counter = 10;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
   }
 
   @override
@@ -57,7 +71,7 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
       Container(color: Colors.blueAccent),
       Container(color: Colors.green),
       Container(color: Colors.red),
-      Container(color: Colors.yellow)
+      MyApp()
     ]);
   }
 
@@ -73,7 +87,7 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
             child: new Container(
                 padding: const EdgeInsets.only(left: 8.0, right: 3.0),
                 decoration: new BoxDecoration(
-                    color: Colors.green,
+                    color: new Color(0xff1DE4AE),
                     borderRadius: new BorderRadius.only(
                       topLeft: const Radius.circular(40.0),
                       topRight: const Radius.circular(40.0),
@@ -82,7 +96,7 @@ class _TabBarInsideAppBarDemoState extends State<TabBarInsideAppBarDemo>
                     )),
                 child: new Center(
                   child: Row(children: <Widget>[
-                    Expanded(child: new Text("10")),
+                    Expanded(child: new Text('$_counter')),
                     Expanded(
                         child: Icon(Icons.loop_rounded, color: Colors.white))
                   ]),
